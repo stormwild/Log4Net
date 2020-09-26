@@ -10,15 +10,15 @@ namespace QuickStart
     {
         static void Main(string[] args)
         {
-            log4net.Config.BasicConfigurator.Configure();
+            log4net.Config.XmlConfigurator.Configure();
 
             var log = log4net.LogManager.GetLogger(typeof(Program));
 
-            log.Debug("Debug from log4net");
-            log.Info("Info from log4net");
-            log.Warn("Warn from log4net");
-            log.Error("Error from log4net");
-            log.Fatal("Fatal from log4net");
+            log.Debug("Debug");
+            log.Info("Info");
+            log.Warn("Warn");
+            log.Error("Error");
+            log.Fatal("Fatal");
 
             Console.ReadLine();
 
