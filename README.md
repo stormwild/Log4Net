@@ -83,6 +83,7 @@ Sample Xml Configuration
 			<layout type="log4net.layout.SimpleLayout" />
 		</appender>
 		<!--<appender name="File" type="log4net.Appender.FileAppender">
+			<file value="GuiAppLog.txt" />
 			<layout type="log4net.layout.SimpleLayout" />
 		</appender>-->
 		<!-- Default Logger -->
