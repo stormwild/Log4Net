@@ -72,7 +72,7 @@ Sample Xml Configuration
 
 `App.config` or `Web.config`
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
 	<configSections>
