@@ -40,7 +40,7 @@ Information associated with a Logging Event
 - Severity
 - Logger
 
-## Appenders
+### Appenders
 
 Logging Event destinations:
 
@@ -52,7 +52,7 @@ Appenders - places where logging events go to be processed
 
 Logging Event can be sent to all appenders, a subset or none.
 
-## Configuration
+### Configuration
 
 The collection of appenders defined for your application as well as the rules that govern how logging events are routed is governed by the Configuration layer.
 
@@ -98,6 +98,46 @@ Sample Xml Configuration
     </startup>
 </configuration>
 ```
+
+### Log Levels
+
+- All
+- Debug
+- Info
+- Warn
+- Error
+- Fatal
+- Off
+
+### Logger Objects
+
+Hierarchical
+
+Appenders Accumulate
+
+### Summary 
+
+Create Logger objects using the GetLogger method of the LogManager class. 
+
+ILog interface allows logging of raw objects, as well as format strings for logging. 
+
+Conditional logging properties of this interface can bypass unnecessary expensive calculations during logging. 
+
+Control logger verbosity by setting the level property of a logger to one of the severity levels defined by log4net.
+
+These levels include ALL, DEBUG, INFO, WARN, ERROR, FATAL, and OFF. 
+
+Logger object naming convention full name of the. NET type is used to define the logger for that type. 
+
+These names translate into a logger hierarchy, and how you can use this logger hierarchy to configure the level and appenders for individual loggers. 
+
+Attach individual appenders to specific loggers. 
+
+Appenders accumulate across the logger hierarchy every time you log a message.
+
+## Appenders
+
+...
 
 ## References
 
