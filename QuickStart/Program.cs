@@ -14,7 +14,11 @@ namespace QuickStart
 
             var log = log4net.LogManager.GetLogger(typeof(Program));
 
-            log.Info("Hello from log4net");
+            log.Debug("Debug from log4net");
+            log.Info("Info from log4net");
+            log.Warn("Warn from log4net");
+            log.Error("Error from log4net");
+            log.Fatal("Fatal from log4net");
 
             Console.ReadLine();
 
