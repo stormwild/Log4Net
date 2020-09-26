@@ -1,18 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 [assembly: log4net.Config.XmlConfigurator]
-namespace QuickStart
+namespace GuiApp
 {
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
-            //log4net.Config.XmlConfigurator.Configure();
-
             var log = log4net.LogManager.GetLogger(typeof(Program));
 
             log.Debug("Debug");
@@ -21,8 +23,9 @@ namespace QuickStart
             log.Error("Error");
             log.Fatal("Fatal");
 
-            Console.ReadLine();
-
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
         }
     }
 }
